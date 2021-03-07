@@ -1,4 +1,4 @@
-# How to recover the data when your macbook is gone.
+# How to recover the data when your macbook is gone
 I have been using the macbook pro for more than two years. Then one day it did not turn on. Bringing it to the store, the mechanic found out that the logic board was dead. According to his words, my laptop was too old and too expensive to repair, it was basically junk. But he could recover the data in the SSD for me for $200. I did not want to waste $200 and hand over my sensitive data to a stranger, so I took my dead laptop home and recovered the data by myself. I succeeded. My SSD is now turned into a flask disk which I can access via USB port, a 500GB SSD flash disk! For future reference, I detail the steps to turn the SSD in Macbook into a flask disk. Total cost to recover the data is less than $80 and it took me less than two hours to finish all steps. Totally worth it.
 
 To retrieve my data, I bought an SSD enclosure for MacBook. Then I removed the SSD in my dead laptop and inserted it to the enclosure. The enclosure with SSD is now literally a USB flash disk. Now is the most challenging part, to make the desktop recognize the SSD flash disk.
