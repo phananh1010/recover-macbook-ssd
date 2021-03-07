@@ -61,6 +61,7 @@ fdisk -l
 ```
 There will be one line from the result showing a Device of unknown Type.
 ![alt text](https://github.com/phananh1010/recover-macbook-ssd/blob/main/unknown.png)
+
 Mark the file path to the dev directory for this device. Then mount the device to a directory.
 ```
 sudo mkdir -p /media/$USERNAME/macssd
