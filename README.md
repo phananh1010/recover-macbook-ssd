@@ -1,9 +1,9 @@
 # How to recover the data when your macbook is gone
-I have been using the macbook pro for more than two years. Then one day it did not turn on. Bringing it to the store, the mechanic found out that the logic board was dead. According to his words, my laptop was too old and too expensive to repair, it was basically junk. But he could recover the data in the SSD for me for $200. I did not want to waste $200 and hand over my sensitive data to a stranger, so I took my dead laptop home and recovered the data by myself. I succeeded. My SSD is now turned into a flask disk which I can access via USB port, a 500GB SSD flash disk! For future reference, I detail the steps to turn the SSD in Macbook into a flask disk. Total cost to recover the data is less than $80 and it took me less than two hours to finish all steps. Totally worth it.
+I have been using the macbook pro for more than two years. Then one day it did not turn on. Bringing it to the store, the mechanic found out that the logic board was dead. According to his words, my laptop was too old and too expensive to repair, it was basically junk. But he could recover the data in the SSD for me for $200. I did not want to waste $200 and hand over my sensitive data to a stranger, so I took my dead laptop home and recovered the data by myself. I succeeded. My SSD is now turned into a flash disk which I can access via USB port, a 500GB SSD flash disk! For future reference, I detail the steps to turn the SSD in Macbook into a flash disk. Total cost to recover the data is less than $80 and it took me less than two hours to finish all steps. Totally worth it.
 
 To retrieve my data, I bought an SSD enclosure for MacBook. Then I removed the SSD in my dead laptop and inserted it to the enclosure. The enclosure with SSD is now literally a USB flash disk. Now is the most challenging part, to make the desktop recognize the SSD flash disk.
 
-Apple has been using APFS, a proprietary file system, to manage files and directories. Since this is a private standard, other OSs could not simply read the data in the flask disk, they don't know how to do it. There are two simple steps to solve it. First, install the [APFS driver](https://github.com/sgan81/apfs-fuse) for Linux. Second, mount the volume.
+Apple has been using APFS, a proprietary file system, to manage files and directories. Since this is a private standard, other OSs could not simply read the data in the flash disk, they don't know how to do it. There are two simple steps to solve it. First, install the [APFS driver](https://github.com/sgan81/apfs-fuse) for Linux. Second, mount the volume.
 
 
 
@@ -54,7 +54,7 @@ sudo cp apfs-* /usr/local/bin
 ```
 
 ### Mount the device
-If all previous steps are successful, the flask disk containing the SSD should be recognize by the OS. To verify, list all the disk volumes by typing
+If all previous steps are successful, the flash disk containing the SSD should be recognize by the OS. To verify, list all the disk volumes by typing
 ```
 fdisk -l
 ```
