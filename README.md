@@ -1,5 +1,5 @@
 # How to recover the data when your macbook is gone
-I have been using the macbook pro for more than two years. Then one day it did not turn on. Bringing it to the store, the mechanic found out that the logic board was dead. According to his words, my laptop was too old and too expensive to repair, it was basically junk. But he could recover the data in the SSD for me for $200. I did not want to waste $200 and hand over my sensitive data to a stranger, so I took my dead laptop home and recovered the data by myself. I succeeded. My SSD is now turned into a flash disk which I can access via USB port, a 500GB SSD flash disk! For future reference, I detail the steps to turn the SSD in Macbook into a flash disk. Total cost to recover the data is less than $80 and it took me less than two hours to finish all steps. Totally worth it.
+I have been using the Macbook Pro for more than two years. Then one day it did not turn on. Bringing it to the store, the mechanic found out that the logic board was dead. According to his words, my laptop was too old and too expensive to repair, it was basically junk. But he could recover the data in the SSD for me for $200. I did not want to waste $200 and hand over my sensitive data to a stranger, so I took my dead laptop home and recovered the data by myself. I succeeded. My SSD is now turned into a flash disk which I can access via USB port, a 500GB SSD flash disk! For future reference, I detail the steps to turn the SSD in Macbook into a flash disk. Total cost to recover the data is less than $80 and it took me less than two hours to finish all steps. Totally worth it.
 
 To retrieve my data, I bought an SSD enclosure for MacBook. Then I removed the SSD in my dead laptop and inserted it to the enclosure. The enclosure with SSD is now literally a USB flash disk. Now is the most challenging part, to make the desktop recognize the SSD flash disk.
 
@@ -14,14 +14,15 @@ All Macbooks use special screws which can only be opened with special scewdriver
 
 After everything is ready, the SSD can be extracted from the laptop. It is quite easy to remove the SSD, simply following the instructions from [ifixit](https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+SSD+Replacement/26811).
 
-## How to mount the macOS APFS disk volumes in Linux
-I used Linux to retrieve my data. As of the time I am writing this document, it is not clear if Windows can read an APFS volume or not.
+## How to read the macOS APFS disk volumes in Linux
+I used a Linux machine to retrieve my data. As of the time I am writing this document, it is not clear if Windows can read an APFS volume or not.
 
 ### Install the APFS driver
 Use the following commands to install the APFS driver.
+```
 sudo apt update
 sudo apt install fuse libfuse-dev libicu-dev bzip2 cmake libz-dev libbz2-dev clang git libattr1-dev
-
+```
 After this command, there will be an error indicating that the `fuse` package is not found. This error persists for Ubuntu 18 and lower versions. We can work around this when compiling the program at the later step. For now, download the APFS Driver source code from the Github repository.
 ```
 git clone https://github.com/sgan81/apfs-fuse.git
@@ -48,17 +49,19 @@ Execute make again, the previous error should disappear.
 ```
 
 
-To make it convenient, the APFS program can be registered so that the full file path is not needed every time `apfs` is executed. To resiter the program, copy the executable binaries into the local bin directory.
+To make it convenient, the APFS command can be registered so that the full file path is not needed every time `apfs` is executed. To resiter the command, copy the executable binaries into the local bin directory.
 ```
 sudo cp apfs-* /usr/local/bin
 ```
 
 ### Mount the device
-If all previous steps are successful, the flash disk containing the SSD should be recognize by the OS. To verify, list all the disk volumes by typing
+If all previous steps are successful, the flash disk containing the SSD should be recognized by the OS. To verify, list all the disk volumes by typing
 ```
 fdisk -l
 ```
-There will be one line from the result showing a Device of unknown Type. Mark the file path to the dev directory for this device. Then mount the device to a directory.
+There will be one line from the result showing a Device of unknown Type.
+![alt text](https://github.com/phananh1010/recover-macbook-ssd/blob/main/unknown.png)
+Mark the file path to the dev directory for this device. Then mount the device to a directory.
 ```
 sudo mkdir -p /media/$USERNAME/macssd
 sudo ./apfs-fuse -o allow_other /dev/<device file name> /media/$USERNAME/macssd
