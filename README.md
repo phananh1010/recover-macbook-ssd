@@ -75,7 +75,7 @@ If everything goes smoothly, a new drive icon will appear on the desktop. Data i
 The time and cost to recover data in the SSD of a dead Macbook is not high, much cheaper than asking an expert. I bought the SSD Enclosure from Amazon for $70 and a Screwdriver set to open the macbook for $6. The whole recovery procedure, from retrieving the SSD to installing the APFS driver, is quite simple for a normal Linux user.
 
 ## Reference
-This small project refer to the following materials/instructions:
+This small project refers to the following materials/instructions:
 
 [1] [MacBook Pro 13 Inch Retina Display Late 2013 SSD Replacement](https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+SSD+Replacement/26811)
 
