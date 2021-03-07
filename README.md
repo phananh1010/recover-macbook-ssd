@@ -76,6 +76,7 @@ The time and cost to recover data in the SSD of a dead Macbook is not high, much
 
 ## Reference
 This small project refer to the following materials/instructions:
+
 [1] [MacBook Pro 13 Inch Retina Display Late 2013 SSD Replacement](https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+SSD+Replacement/26811)
 
 [2] [How to mount macos apfs disk volumes in Linux](https://linuxnewbieguide.org/how-to-mount-macos-apfs-disk-volumes-in-linux/)
