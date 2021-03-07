@@ -10,7 +10,7 @@ Apple has been using APFS, a proprietary file system, to manage files and direct
 ## Prepare the hardwares
 Depending on the Macbook model, the SSD Enclosure may be different. In my case, I used the [ACASIS USB C 3.0 Enclosure](https://www.amazon.com/gp/product/B08B634C7C/) which works for laptops from Mid-2013 and later.
 
-All Macbooks use special screws which can only be opened with special scewdrivers. However, it is very easy to obtain them from Amazon.
+All Macbooks use special screws which can only be opened with special screwdrivers. However, it is very easy to obtain them from Amazon.
 
 After everything is ready, the SSD can be extracted from the laptop. It is quite easy to remove the SSD, simply following the instructions from [ifixit](https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Retina+Display+Late+2013+SSD+Replacement/26811).
 
@@ -49,7 +49,7 @@ Execute make again, the previous error should disappear.
 ```
 
 
-To make it convenient, the APFS command can be registered so that the full file path is not needed every time `apfs` is executed. To resiter the command, copy the executable binaries into the local bin directory.
+To make it convenient, the APFS command can be registered so that the full file path is not needed every time `apfs` is executed. Copy the executable binaries into the local bin directory.
 ```
 sudo cp apfs-* /usr/local/bin
 ```
@@ -67,7 +67,7 @@ Mark the file path to the dev directory for this device. Then mount the device t
 sudo mkdir -p /media/$USERNAME/macssd
 sudo ./apfs-fuse -o allow_other /dev/<device file name> /media/$USERNAME/macssd
 ```
-Replace <device file name> with the name associated with device of unknown type.
+Replace <device file name> with the name associated with the device of unknown type.
 
 If everything goes smoothly, a new drive icon will appear on the desktop. Data in the SSD can be accessed via the drive icon.
 
