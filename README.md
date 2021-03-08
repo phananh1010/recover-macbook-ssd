@@ -65,7 +65,7 @@ There will be one line from the result showing a Device of unknown Type.
 Mark the file path to the dev directory for this device. Then mount the device to a directory.
 ```
 sudo mkdir -p /media/$USERNAME/macssd
-sudo ./apfs-fuse -o allow_other /dev/<device file name> /media/$USERNAME/macssd
+sudo apfs-fuse -o allow_other /dev/<device file name> /media/$USERNAME/macssd
 ```
 Replace <device file name> with the name associated with the device of unknown type.
 
